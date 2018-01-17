@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package appnex;
+package test;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -18,8 +18,12 @@ public class TestWikipedia {
    public static void main(String[] args) {
        
    WebDriver driver = new FirefoxDriver();
-   driver.get("htttp://www.wikipedia.com");  //obtener el enlace deseado
+   driver.get("http://www.wikipedia.org");  //obtener el enlace deseado
    WebElement link;
    link = driver.findElement(By.LinkText("English"));  //busca el elemento enla pagina web
+   link.click();
+   Thread.sleep(5000);                //tiempo a esperar en lo que carga 
+   
+   
    }  
 }
