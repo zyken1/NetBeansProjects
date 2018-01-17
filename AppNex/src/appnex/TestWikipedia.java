@@ -5,6 +5,7 @@
  */
 package appnex;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -19,6 +20,6 @@ public class TestWikipedia {
    WebDriver driver = new FirefoxDriver();
    driver.get("htttp://www.wikipedia.com");  //obtener el enlace deseado
    WebElement link;
-   link = driver.findElement(By.linktext("English"));  //busca el elemento enla pagina web
+   link = driver.findElement(By.LinkText("English"));  //busca el elemento enla pagina web
    }  
 }
