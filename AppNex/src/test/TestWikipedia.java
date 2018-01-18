@@ -8,7 +8,8 @@ package test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 
 /**
  *
@@ -17,10 +18,14 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class TestWikipedia {
    public static void main(String[] args) throws InterruptedException {
        
-   WebDriver driver = new FirefoxDriver();
+  // WebDriver driver = new FirefoxDriver();
+   System.setProperty("webdriver.ie.driver", "C:\\Users\\TOSHIBA\\Downloads//IEDriverServer.exe");
+   WebDriver driver  = new InternetExplorerDriver();
+   
    driver.get("http://www.wikipedia.org");  //obtener el enlace deseado
    WebElement link;
-   link = driver.findElement(By.linkText("English"));  //busca el elemento enla pagina web
+       System.out.println(driver.getPageSource());   
+   link = driver.findElement(By.linkText("Español"));  //busca el elemento enla pagina web
    link.click();
    Thread.sleep(5000);                //tiempo a esperar en lo que carga 
    WebElement searchBox;             //Crear un Elemento ala caja del texto de busqueda
@@ -30,6 +35,6 @@ public class TestWikipedia {
    Thread.sleep(5000);                 //le ponemos una espera de nuevo
    driver.quit();                      //Cerrar la instancia del navegador en Web drive 
    
-   
+  
    }  
 }
