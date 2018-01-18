@@ -1,30 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package test;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 //import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
+//import org.openqa.selenium.ie.InternetExplorerDriver;
 
 /**
- *
  * @author Nex
  */
 public class TestWikipedia {
    public static void main(String[] args) throws InterruptedException {
        
   // WebDriver driver = new FirefoxDriver();
-   System.setProperty("webdriver.ie.driver", "C:\\Users\\TOSHIBA\\Downloads//IEDriverServer.exe");
-   WebDriver driver  = new InternetExplorerDriver();
+   System.setProperty("webdriver.ie.driver", "C:\\Users\\TOSHIBA\\Downloads\\chromedriver.exe");
+   WebDriver driver  = new ChromeDriver();
    
    driver.get("http://www.wikipedia.org");  //obtener el enlace deseado
    WebElement link;
-       System.out.println(driver.getPageSource());   
+       System.out.println(driver.getPageSource());     //obtener el codigofuetne de una pagina
    link = driver.findElement(By.linkText("Español"));  //busca el elemento enla pagina web
    link.click();
    Thread.sleep(5000);                //tiempo a esperar en lo que carga 
