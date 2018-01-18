@@ -23,8 +23,13 @@ public class TestWikipedia {
    link = driver.findElement(By.linkText("English"));  //busca el elemento enla pagina web
    link.click();
    Thread.sleep(5000);                //tiempo a esperar en lo que carga 
-   WebElement searchBox; //Crear un Elemento ala caja del texto de busqueda
-   searchBox = driver .findElement(By.id("searchInput"));
+   WebElement searchBox;             //Crear un Elemento ala caja del texto de busqueda
+   searchBox = driver .findElement(By.id("searchInput"));     //Cuadro de  busqueda
+   searchBox.sendKeys("Software");     //Se escribe en el cuadro de busqueda 
+   searchBox.submit();
+   Thread.sleep(5000);                 //le ponemos una espera de nuevo
+   driver.quit();                      //Cerrar la instancia del navegador en Web drive 
+   
    
    }  
 }
