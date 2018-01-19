@@ -14,12 +14,12 @@ public class chrome {
     System.setProperty("webdriver.chrome.driver", "C:\\Users\\TOSHIBA\\Downloads\\chromedriver.exe"); 
          WebDriver driver = new ChromeDriver();
    driver.get("http://www.google.com/xhtml");            /*obtener el enlace deseado*/
-       System.out.println(driver.getPageSource());     //obtener el codigofuetne de una pagina
-   Thread.sleep(2000);                //tiempo a esperar en lo que carga 
+       //System.out.println(driver.getPageSource());     //obtener el codigofuetne de una pagina
+   Thread.sleep(1000);                //tiempo a esperar en lo que carga 
    WebElement searchBox = driver.findElement(By.name("q"));             //Crear un Elemento ala caja del texto de busqueda
    searchBox.sendKeys("ChromeDriver");     //Se escribe en el cuadro de busqueda 
    searchBox.submit();
-   Thread.sleep(5000);                 //le ponemos una espera de nuevo
+   Thread.sleep(2000);                 //le ponemos una espera de nuevo
    driver.quit();                      //Cerrar la instancia del navegador en Web drive 
     
        }  
