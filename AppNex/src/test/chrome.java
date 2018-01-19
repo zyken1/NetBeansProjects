@@ -22,6 +22,10 @@ public class chrome {
    Thread.sleep(2000);                 //le ponemos una espera de nuevo
    driver.quit();                      //Cerrar la instancia del navegador en Web drive 
     
+   
+   // se anexan cambios al archivo
+   
+   
        }  
 
 

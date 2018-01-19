@@ -11,7 +11,7 @@ public class Proceso extends Thread{
 	
 	public void run()
 	{
-		for(int i =0;i<15;i++)
+		for(int i=0;i<=155;i++)
 		{
 			System.out.println(mensaje);
 		}
