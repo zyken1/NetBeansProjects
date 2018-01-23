@@ -21,7 +21,7 @@ public class chrome {
    searchBox.submit();
    Thread.sleep(2000);                 //le ponemos una espera de nuevo
    driver.quit();                      //Cerrar la instancia del navegador en Web drive 
-    
+   
        }  
 
 
