@@ -12,25 +12,25 @@ public class SeleniumCorreo {
 
     /**
      * @param args the command line arguments
+     * @throws java.lang.InterruptedException
      */
    public static void main(String[] args) throws InterruptedException {
-
+  
+       
     System.setProperty("webdriver.chrome.driver","C:\\Users\\TOSHIBA\\Downloads\\chromedriver.exe");  //path dewebdriver
        WebDriver driver = new ChromeDriver();
-//driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 driver.manage().window().maximize();
+
 
 driver.get("https://accounts.google.com/ServiceLogin?");
 
-
 //System.out.println(driver.getPageSource());     //obtener el codigofuetne de una pagina
-
-
 // gmail login
-WebElement searchBox = driver.findElement(By.name("Email"));             //Crear un Elemento ala caja del texto de busqueda
- searchBox.sendKeys("ChromeDriver"); 
+//WebElement searchBox = driver.findElement(By.name("Email"));             //Crear un Elemento ala caja del texto de busqueda
+ //searchBox.sendKeys("ChromeDriver"); 
 
-//driver.findElement(By.id("Email")).sendKeys("atencion3goldenharvest@gmail.com");  //inserccion con llaves
+driver.findElement(By.id("username")).sendKeys("atencion3goldenharvest@gmail.com");  //inserccion con llaves
 driver.findElement(By.id("next")).click();
 driver.findElement(By.id("Passwd")).sendKeys("dosmasdos4");
 driver.findElement(By.id("signIn")).click();
