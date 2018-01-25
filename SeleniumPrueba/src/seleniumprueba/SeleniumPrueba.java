@@ -17,7 +17,7 @@ public class SeleniumPrueba {
    
            
    //Crear un Elemento ala caja del texto de busqueda
-    driver.findElement(By.id("lst-ib")).clear();
+    driver.findElement(By.id("lst-ib")).clear();   //nombre del ID es BUSCAR  en el navegador 
     
     driver.findElement(By.id("lst-ib")).sendKeys("selenium");
     driver.findElement(By.name("btnK")).click();                                //da lick en el boton buscar
