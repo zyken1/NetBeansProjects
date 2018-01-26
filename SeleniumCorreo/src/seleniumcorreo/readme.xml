@@ -8,6 +8,13 @@ and open the template in the editor.
   System.out.println(driver.getPageSource());                                                     //obtener el codigo fuente  de una pagina
   Thread.sleep(1000);                                                                             //tiempo a esperar en lo que carga 
   driver.findElement(By.cssSelector("li.toclevel-2.tocsection-7 > a > span.toctext")).click();    //dezplazala pagina web
+  
+   driver.findElement(By.cssSelector("a.maia-button.button-download.mobile-is-hidden.get-started.go-to-drive")).click();
+   driver.findElement(By.id("Email")).sendKeys("atencion3goldenharvest@gmail.com");
+   driver.findElement(By.cssSelector("span > svg")).click();
+   driver.findElement(By.cssSelector("#identifierLink > div.vdE7Oc.f3GIQ > p")).click();
+   driver.findElement(By.linkText("Iniciar sesión")).click();
+   driver.findElement(By.cssSelector("span.RveJvd.snByac")).click();                                //boton siguiente de google
 <root>
     
 </root>

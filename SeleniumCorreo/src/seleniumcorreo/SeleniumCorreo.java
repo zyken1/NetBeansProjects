@@ -2,6 +2,7 @@
 package seleniumcorreo;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,21 +18,22 @@ public class SeleniumCorreo {
          // Put a Implicit wait, this means that any search for elements on the page
          driver.get("https://mail.google.com/");
          driver.manage().window().maximize();
-    //driver.findElement(By.cssSelector("a.maia-button.button-download.mobile-is-hidden.get-started.go-to-drive")).click();
-    //driver.findElement(By.id("Email")).sendKeys("atencion3goldenharvest@gmail.com");
-    //driver.findElement(By.cssSelector("span > svg")).click();
-    //driver.findElement(By.cssSelector("#identifierLink > div.vdE7Oc.f3GIQ > p")).click();
-    //driver.findElement(By.linkText("Iniciar sesión")).click();
-   //driver.findElement(By.cssSelector("span.RveJvd.snByac")).click();
-    driver.findElement(By.id("identifierId")).sendKeys("atencion3goldenharvest@gmail.com");
-    driver.findElement(By.cssSelector("span.RveJvd.snByac")).click();
     
+    driver.findElement(By.id("identifierId")).sendKeys("atencion3goldenharvest@gmail.com");
+    //driver.findElement(By.id("identifierId")).sendKeys(Keys.ENTER);             //detecta la entrada de teclas
+    driver.findElement(By.cssSelector("span.RveJvd.snByac")).click();             //busqueda del boton siguiente
     driver.findElement(By.name("password")).clear();
     driver.findElement(By.name("password")).sendKeys("goldenupn@#33");
     driver.findElement(By.cssSelector("span.RveJvd.snByac")).click();   
-  
+ 
+        //dentro del correo
+    //driver.findElement(By.cssSelector("span.RveJvd.snByac")).click();
+    driver.findElement(By.xpath("(//span[@name='SOLUCIONES ENERGETICAS'])[2]")).click();
+    driver.findElement(By.linkText("Recibidos")).click();
     
-   //driver.quit();          //Cerrar la instancia del navegador en Web drive 
+        //Salir del correo
+     Thread.sleep(5000);
+     driver.quit();          //Cerrar la instancia del navegador en Web drive 
    
        }  
 
