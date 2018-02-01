@@ -19,7 +19,19 @@ public class SeleniumCorreo {
          driver.get("https://mail.google.com/");
          driver.manage().window().maximize();
     
+    //driver.findElement(By.id("Email")).sendKeys("atencion3goldenharvest@gmail.com");
     driver.findElement(By.id("identifierId")).sendKeys("atencion3goldenharvest@gmail.com");
+    
+    /*var value = this.browserbot.findElement("id=Email").value;
+        if (value == "Email") {
+        driver.findElement(By.id("Email")).sendKeys("atencion3goldenharvest@gmail.com");
+        Else
+                {
+                }
+    
+    }
+
+*/
     //driver.findElement(By.id("identifierId")).sendKeys(Keys.ENTER);             //detecta la entrada de teclas
     driver.findElement(By.cssSelector("span.RveJvd.snByac")).click();             //busqueda del boton siguiente
     driver.findElement(By.name("password")).clear();
