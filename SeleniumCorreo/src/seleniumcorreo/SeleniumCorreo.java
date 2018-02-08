@@ -15,20 +15,23 @@ public class SeleniumCorreo {
     // Optional, if not specified, WebDriver will search your path
     System.setProperty("webdriver.chrome.driver", "C:\\Users\\TOSHIBA\\Downloads\\Selenium\\chromedriver.exe"); 
          WebDriver driver = new ChromeDriver();
-         //  Wait For Page To Load
- 
+        
+         //  Wait For Page To Load 
          
          driver.get("https://mail.google.com/");
          driver.manage().window().maximize();
     
     //driver.findElement(By.id("Email")).sendKeys("atencion3goldenharvest@gmail.com");
+    String expPageTitle = "Email";
+  
+    
     driver.findElement(By.id("identifierId")).sendKeys("atencion3goldenharvest@gmail.com");
     
-   var value = this.browserbot.findElement("id=someInput").value;
+  /* var value = this.browserbot.findElement("id=someInput").value;
     if (value == "Slanec is the best!") {
     this.browserbot.findElement("id=someButton").click();
 }
-
+*/
     
     
     //driver.findElement(By.id("identifierId")).sendKeys(Keys.ENTER);             //detecta la entrada de teclas
