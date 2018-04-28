@@ -15,6 +15,41 @@ and open the template in the editor.
    driver.findElement(By.cssSelector("#identifierLink > div.vdE7Oc.f3GIQ > p")).click();
    driver.findElement(By.linkText("Iniciar sesión")).click();
    driver.findElement(By.cssSelector("span.RveJvd.snByac")).click();                                //boton siguiente de google
+
+
+         driver.get("https://mail.google.com/");
+         driver.manage().window().maximize();
+    
+    driver.findElement(By.id("Email")).sendKeys("atencion3goldenharvest@gmail.com");
+    String expPageTitle = "Email";
+  
+    
+    driver.findElement(By.id("identifierId")).sendKeys("atencion3goldenharvest@gmail.com");
+    
+    var value = this.browserbot.findElement("id=someInput").value;
+    if (value == "Slanec is the best!")
+{
+    this.browserbot.findElement("id=someButton").click();
+}
+
+    
+    driver.findElement(By.id("identifierId")).sendKeys(Keys.ENTER);             //detecta la entrada de teclas
+    driver.findElement(By.cssSelector("span.RveJvd.snByac")).click();             //busqueda del boton siguiente
+    driver.findElement(By.id("Passwd")).sendKeys("goldenupn@#33");
+    driver.findElement(By.cssSelector("span.RveJvd.snByac")).click();   
+    
+    driver.findElement(By.xpath("//input[@aria-label='Enter your password' and @name='password']")).sendKeys("goldenupn@#33");
+        Thread.sleep(200);
+        driver.findElement(By.cssSelector("span.RveJvd.snByac")).click();
+       
+        //dentro del correo
+    driver.findElement(By.xpath("(//span[@name='SOLUCIONES ENERGETICAS'])[2]")).click();
+    driver.findElement(By.linkText("Recibidos")).click();
+    
+        //Salir del correo
+     Thread.sleep(5000);
+     driver.quit();          //Cerrar la instancia del navegador en Web drive 
+
 <root>
     
 </root>
